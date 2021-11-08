@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <decisions>
+        <name>Is_High_Count</name>
+        <label>Is High Count</label>
+        <locationX>163</locationX>
+        <locationY>556</locationY>
+        <defaultConnector>
+            <targetReference>Is_Medium_Count</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not High Count</defaultConnectorLabel>
+        <rules>
+            <name>High_Count</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Log_Count__c</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <numberValue>100.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Log_Count__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>50.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_High_Priority</targetReference>
+            </connector>
+            <label>High Count</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Highest_Count</name>
+        <label>Is Highest Count</label>
+        <locationX>167</locationX>
+        <locationY>336</locationY>
+        <defaultConnector>
+            <targetReference>Is_High_Count</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Highest Count</defaultConnectorLabel>
+        <rules>
+            <name>Highest_Count</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Log_Count__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>100.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Highest_Priority</targetReference>
+            </connector>
+            <label>Highest Count</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Low_Count</name>
+        <label>Is Low Count</label>
+        <locationX>176</locationX>
+        <locationY>962</locationY>
+        <defaultConnector>
+            <targetReference>Set_Lowest_Priorty</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Low Count</defaultConnectorLabel>
+        <rules>
+            <name>Low_Count</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Log_Count__c</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <numberValue>20.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Log_Count__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>5.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Low_Priority</targetReference>
+            </connector>
+            <label>Low Count</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Medium_Count</name>
+        <label>Is Medium Count</label>
+        <locationX>167</locationX>
+        <locationY>771</locationY>
+        <defaultConnector>
+            <targetReference>Is_Low_Count</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Medium Count</defaultConnectorLabel>
+        <rules>
+            <name>Medium_Count</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Log_Count__c</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <numberValue>50.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Log_Count__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>20.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Medium_Priority</targetReference>
+            </connector>
+            <label>Medium Count</label>
+        </rules>
+    </decisions>
+    <description>Update Issue priority based on Log Counts</description>
+    <interviewLabel>Issue Priority Assignment {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Issue Priority Assignment</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Set_High_Priority</name>
+        <label>Set High Priority</label>
+        <locationX>435</locationX>
+        <locationY>551</locationY>
+        <inputAssignments>
+            <field>Priority__c</field>
+            <value>
+                <stringValue>High</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Highest_Priority</name>
+        <label>Set Highest Priority</label>
+        <locationX>428</locationX>
+        <locationY>335</locationY>
+        <inputAssignments>
+            <field>Priority__c</field>
+            <value>
+                <stringValue>Highest</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Low_Priority</name>
+        <label>Set Low Priority</label>
+        <locationX>449</locationX>
+        <locationY>975</locationY>
+        <inputAssignments>
+            <field>Priority__c</field>
+            <value>
+                <stringValue>Low</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Lowest_Priorty</name>
+        <label>Set Lowest Priorty</label>
+        <locationX>189</locationX>
+        <locationY>1175</locationY>
+        <inputAssignments>
+            <field>Priority__c</field>
+            <value>
+                <stringValue>Lowest</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Set_Medium_Priority</name>
+        <label>Set Medium Priority</label>
+        <locationX>432</locationX>
+        <locationY>766</locationY>
+        <inputAssignments>
+            <field>Priority__c</field>
+            <value>
+                <stringValue>Medium</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Is_Highest_Count</targetReference>
+        </connector>
+        <object>Issue__c</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2021-08-31</startDate>
+            <startTime>13:30:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
