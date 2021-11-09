@@ -42,7 +42,7 @@
                 <header>Issue Impact by Functional Area</header>
                 <legendPosition>Right</legendPosition>
                 <maxValuesDisplayed>98</maxValuesDisplayed>
-                <report>pharos__Pharos_Logs/Issues_by_Functional_Area_cIU</report>
+                <report>publicReports/Issues_by_Functional_Area_cIU</report>
                 <showPercentage>false</showPercentage>
                 <showValues>false</showValues>
                 <sortBy>RowLabelAscending</sortBy>
@@ -84,7 +84,7 @@
                 </groupingSortProperties>
                 <header>Unresolved Impact by Type</header>
                 <legendPosition>Right</legendPosition>
-                <report>pharos__Pharos_Logs/Copy_of_Unresolved_Impact_by_Type_VDJ</report>
+                <report>publicReports/Copy_of_Unresolved_Impact_by_Type_VDJ</report>
                 <showPercentage>false</showPercentage>
                 <showValues>false</showValues>
                 <sortBy>RowLabelAscending</sortBy>
@@ -126,7 +126,7 @@
                 </groupingSortProperties>
                 <header>Unresolved Impact by Category</header>
                 <legendPosition>Right</legendPosition>
-                <report>pharos__Pharos_Logs/Issues_by_Functional_Area_cIU</report>
+                <report>publicReports/Issues_by_Functional_Area_cIU</report>
                 <showPercentage>false</showPercentage>
                 <showValues>false</showValues>
                 <sortBy>RowLabelAscending</sortBy>
@@ -161,7 +161,7 @@
                 </groupingSortProperties>
                 <header>Unresolved Issues by Priority</header>
                 <legendPosition>Bottom</legendPosition>
-                <report>pharos__Pharos_Logs/Unresolved_Issues_by_Priority_Evz</report>
+                <report>publicReports/Unresolved_Issues_by_Priority_Evz</report>
                 <showPercentage>false</showPercentage>
                 <showPicturesOnCharts>false</showPicturesOnCharts>
                 <showValues>true</showValues>
@@ -204,7 +204,7 @@
                 </groupingSortProperties>
                 <header>Unresolved Issues</header>
                 <legendPosition>Right</legendPosition>
-                <report>Pharos_Logs/publicReports/New_Logs_with_Issue_Report_X0E</report>
+                <report>publicReports/New_Logs_with_Issue_Report_X0E</report>
                 <showPercentage>false</showPercentage>
                 <showValues>false</showValues>
                 <sortBy>RowLabelAscending</sortBy>

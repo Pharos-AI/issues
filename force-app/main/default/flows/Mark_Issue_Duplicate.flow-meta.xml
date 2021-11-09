@@ -67,8 +67,8 @@
         <dataType>DateTime</dataType>
         <expression>IF({!Get_Issue.First_Occurred_On__c} &lt;= {!Related_Issue.First_Occurred_On__c}, {!Get_Issue.First_Occurred_On__c}, {!Related_Issue.First_Occurred_On__c})</expression>
     </formulas>
-    <interviewLabel>Mark Duplicate: {!Get_Issue.Name}</interviewLabel>
-    <label>Mark Duplicate</label>
+    <interviewLabel>Mark Issue Duplicate {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Mark Issue Duplicate</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>

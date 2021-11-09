@@ -29,30 +29,19 @@
         <name>AccountForecastSettings</name>
     </types>
     <types>
-        <members>Issue__c</members>
+        <members>*</members>
         <name>CustomObject</name>
     </types>
     <types>
-        <members>CompanyDashboards</members>
-        <members>CompanyDashboards/AdoptionDashboard</members>
-        <members>CompanyDashboards/CompanyPerformanceDashboard</members>
-        <members>CompanyDashboards/DeZZEWnvXcgvPmFnLjWwmeAzJdHEDz1</members>
-        <members>CompanyDashboards/DnrwyRvtmwTajhiaPWNvvYdfwAHzuR1</members>
-        <members>CompanyDashboards/DnrwyRvtmwTajhiaPWNvvYdfwAHzuR2</members>
-        <members>CompanyDashboards/TClqkOKgbFYfcdtlxrHuruaMJVxRHU</members>
-        <members>CompanyDashboards/fkYxoaQBQeKCNHUKtYXGtRWtAczEUL1</members>
+        <members>*</members>
         <name>Dashboard</name>
     </types>
     <types>
-        <members>Issue_Priority_Assignment</members>
-        <members>New_Issue</members>
-        <members>Mark_Duplicate</members>
+        <members>*</members>
         <name>Flow</name>
     </types>
     <types>
-        <members>Issue_Priority_Assignment</members>
-        <members>New_Issue</members>
-        <members>Mark_Duplicate</members>
+        <members>*</members>
         <name>FlowDefinition</name>
     </types>
     <types>
@@ -60,42 +49,28 @@
         <name>HomePageLayout</name>
     </types>
     <types>
-        <members>publicReports</members>
-        <members>publicReports/New_Logs_with_Issue_Report_X0E</members>
-        <members>publicReports/Copy_of_All_Logs_Last_2_Months_4Lu</members>
-        <members>publicReports/Copy_of_Apex_Errors_by_Namespace_YPO</members>
-        <members>publicReports/Copy_of_Todays_User_Impact_kWB</members>
+        <members>*</members>
         <name>Report</name>
     </types>
     <types>
-        <members>Issue__c-Issue Layout</members>
+        <members>*</members>
         <name>Layout</name>
     </types>
     <types>
-        <members>Issue__c.Assigned_To__c</members>
-        <members>Issue__c.Description__c</members>
-        <members>Issue__c.First_Occurred_On__c</members>
-        <members>Issue__c.Functional_Area__c</members>
-        <members>Issue__c.Key__c</members>
-        <members>Issue__c.Last_Occurred_On__c</members>
-        <members>Issue__c.Log_Count__c</members>
-        <members>Issue__c.Log__c</members>
-        <members>Issue__c.Organization_Name__c</members>
-        <members>Issue__c.Priority__c</members>
-        <members>Issue__c.Related_Issue__c</members>
-        <members>Issue__c.Resolved_On__c</members>
-        <members>Issue__c.Status__c</members>
-        <members>Issue__c.Summary__c</members>
+        <members>*</members>
         <name>CustomField</name>
     </types>
     <types>
-        <members>Issue__c-en_US</members>
+        <members>*</members>
         <name>CustomObjectTranslation</name>
     </types>
     <types>
-        <members>Issue_Lightning_Page</members>
-        <members>Pharos_Home</members>
+        <members>*</members>
         <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>QuickAction</name>
     </types>
     <version>52.0</version>
 </Package>
