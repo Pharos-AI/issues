@@ -72,5 +72,9 @@
         <members>*</members>
         <name>QuickAction</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
     <version>52.0</version>
 </Package>
