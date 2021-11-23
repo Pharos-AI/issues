@@ -234,7 +234,7 @@ ISBLANK({!Find_Existing_Issue.Log_Count__c}) ,1,
         <recordTriggerType>Create</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Obsolete</status>
+    <status>Active</status>
     <variables>
         <name>Issue_Exists</name>
         <dataType>Boolean</dataType>
