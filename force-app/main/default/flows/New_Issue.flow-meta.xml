@@ -237,7 +237,6 @@ ISBLANK({!Find_Existing_Issue.Log_Count__c}) ,1,
         </scheduledPaths>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Active</status>
     <variables>
         <name>Issue_Exists</name>
         <dataType>Boolean</dataType>
