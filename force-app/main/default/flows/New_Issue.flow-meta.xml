@@ -219,9 +219,7 @@ ISBLANK({!Find_Existing_Issue.Log_Count__c}) ,1,
     <start>
         <locationX>50</locationX>
         <locationY>50</locationY>
-        <connector>
-            <targetReference>Find_Existing_Issue</targetReference>
-        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Issue__c</field>
@@ -232,6 +230,11 @@ ISBLANK({!Find_Existing_Issue.Log_Count__c}) ,1,
         </filters>
         <object>pharos__Log__c</object>
         <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <connector>
+                <targetReference>Find_Existing_Issue</targetReference>
+            </connector>
+        </scheduledPaths>
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
